@@ -6,3 +6,15 @@ pip uninstall tensorflow-aarch64
 2. Installer tflite-runtime
 pip install https://github.com/google-coral/pycoral/releases/download/release-frogfish/tflite_runtime-2.14.0-cp311-cp311-linux_aarch64.whl
 
+
+
+cv2.imshow("Detection", frame)
+key = cv2.waitKey(0) & 0xFF
+
+# Si la fenêtre est fermée manuellement
+if cv2.getWindowProperty("Detection", cv2.WND_PROP_VISIBLE) < 1:
+    break
+
+# Si l'utilisateur appuie sur ESC
+if key == 27:
+    break
