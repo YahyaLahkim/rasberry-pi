@@ -4,6 +4,7 @@ import tflite_runtime.interpreter as tflite
 import os
 
 # Charger modèle
+#interpreter = tf.Interpreter(model_path="model_int8.tflite")
 interpreter = tflite.Interpreter(model_path="model_int8.tflite")
 interpreter.allocate_tensors()
 
